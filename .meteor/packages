@@ -10,3 +10,7 @@ accounts-base
 spin
 iron-router
 coffeescript
+less
+less-bootstrap-3
+font-awesome-4-less
+jade

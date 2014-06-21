@@ -1,0 +1,24 @@
+template(name="header")
+    header
+        nav.navbar.navbar-default(role="navigation")
+            .container-fluid
+                // Brand and toggle get grouped for better mobile display
+                .navbar-header
+                    button.navbar-toggle(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+                        span.sr-only Toggle navigation
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href="#") Sport board
+
+                // Collect the nav links, forms, and other content for toggling
+                .collapse.navbar-collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li.dropdown
+                            a.dropdown-toggle(href="#", data-toggle="dropdown") Mon compte
+                                b.caret
+                            ul.dropdown-menu
+                                li
+                                    a(href="#") Paramètres
+                                li
+                                    a(href="#") Deconnexion

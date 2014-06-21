@@ -1,5 +1,8 @@
 Router.configure
   layoutTemplate: 'layout'
+  yieldTemplates:
+    header:
+      to: 'header'
 
 Router.map ->
   @route 'home',

@@ -1,0 +1,9 @@
+template(name="comments")
+    .tile
+        each comments
+            +commentItem
+
+template(name="commentItem")
+    .comment
+        span {{author}}
+        span {{text}}
