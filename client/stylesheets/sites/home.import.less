@@ -1,14 +1,40 @@
+@tile-height: 200px;
+
 h2 {
-  margin-top: 10px;
+  margin: 0;
+  padding: 0.25em;
 }
 
 .home {
+  .row {
+    .col-xs-6:nth-child(1) {
+      padding-right: 0.25em;
+    }
+
+    .col-xs-6:nth-child(2) {
+      padding-left: 0.25em;
+    }
+  }
+
   .tile {
     background: @navbar-default-bg;
     border: 1px solid @navbar-default-border;
-    height: 200px;
+    height: @tile-height;
     margin: 0.5em;
     padding: 0.5em;
+
+    &.bg-success {
+      .bg-success;
+      border: none;
+    }
+
+    &.offer {
+      text-align: center;
+
+      h2 {
+        height: @tile-height;
+      }
+    }
   }
 
   .comments-container {
