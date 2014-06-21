@@ -1,9 +1,16 @@
 template(name="comments")
     .tile
-        each comments
-            +commentItem
+        h2 Derniers commentaires
+        .comments-container
+            each comments
+                +commentItem
 
 template(name="commentItem")
     .comment
-        span {{author}}
-        span {{text}}
+        if gender
+            img.female
+        else
+            img.male
+        span
+            strong #{author} :
+            span #{text}
