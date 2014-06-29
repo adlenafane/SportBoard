@@ -7,6 +7,10 @@ h2 {
   padding: 0.25em;
 }
 
+a {
+  color: @text-color;
+}
+
 .home {
   padding: 0 15px;
   margin-left: 0;
@@ -64,12 +68,14 @@ h2 {
     }
 
     &.contacts {
-      i {
-        display: block;
-        font-size: 2em;
-        padding: 0.1em;
+      .contact-row {
+        margin: 0.5em 0;
         text-align: center;
         width: 100%;
+
+        i {
+          display: block;
+        }
       }
     }
   }
