@@ -37,15 +37,18 @@ h2 {
     }
 
     &.metrics {
+      .fa.fa-spinner {
+        -webkit-animation:spin 4s linear infinite;
+        -moz-animation:spin 4s linear infinite;
+        animation:spin 4s linear infinite;
+      }
       .steps {
         margin-left: 1em;
-        span {
-
-        }
 
         .progress {
           display: inline-block;
           margin-bottom: 0;
+          margin-left: 1em;
           vertical-align: bottom;
           width: 40%;
         }
@@ -57,6 +60,16 @@ h2 {
 
       h2 {
         height: @tile-height;
+      }
+    }
+
+    &.contacts {
+      i {
+        display: block;
+        font-size: 2em;
+        padding: 0.1em;
+        text-align: center;
+        width: 100%;
       }
     }
   }
