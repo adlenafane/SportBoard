@@ -1,4 +1,4 @@
-Template.planning.helpers
+Template.planningSummary.helpers
   planning: ->
     planning =
       date: moment().format("dddd D")

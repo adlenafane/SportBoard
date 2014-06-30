@@ -2,7 +2,8 @@ template(name="home")
     .home
         .row
             .col-xs-12.col-md-6
-                +planning
+                a.no-design(href="{{pathFor 'planning'}}")
+                    +planningSummary
             .col-xs-12.col-md-6
                 +metrics
         .row

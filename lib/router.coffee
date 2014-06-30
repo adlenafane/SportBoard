@@ -8,3 +8,7 @@ Router.map ->
   @route 'home',
     path: '/'
     template: 'home'
+
+  @route 'planning',
+    path: '/planning'
+    template: 'planning'

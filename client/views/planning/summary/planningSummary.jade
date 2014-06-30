@@ -1,0 +1,6 @@
+template(name="planningSummary")
+    .tile
+        h2 #{planning.date}
+        ul
+            each planning.lessons
+                li #{hour}: #{name} - #{duration}'
