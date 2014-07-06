@@ -8,9 +8,10 @@ template(name="home")
                 +metrics
         .row
             .col-xs-12.col-md-6
-                +comments
+                a.no-design(href="{{pathFor 'activity'}}")
+                    +activitySummary
             .col-xs-12.col-md-6
-                //+leaderboard
+                +comments
         .row
             .col-xs-6
                 +offer

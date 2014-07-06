@@ -12,3 +12,7 @@ Router.map ->
   @route 'planning',
     path: '/planning'
     template: 'planning'
+
+  @route 'activity',
+    path: '/activity'
+    template: 'activity'
