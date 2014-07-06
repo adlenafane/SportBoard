@@ -1,3 +1,30 @@
 template(name="activity")
-    .tile
-        h2 Mon activité
+    h2 Mon activité
+    form(role="form")#add-activity
+        .row
+            .col-sm-6.form-group
+                label Type
+            .col-sm-6.form-group
+                select.form-control
+                    each activityOptions
+                        option #{label}
+        .row.form-group
+            .col-sm-6
+                label Durée (min)
+            .col-sm-6
+                input.form-control(type="number", step="1", min="0")
+        .row.form-group
+            .col-sm-6
+                label Ressenti
+            .col-sm-6
+                each activityFeeling
+                    +radioPictoOption
+        .row.form-group
+            .col-sm-6
+                label Performance
+            .col-sm-6
+                each activityPerformance
+                    +radioPictoOption
+        .row
+            .col-sm-12
+                button.btn.btn-primary.btn-block(type="button") Ajouter

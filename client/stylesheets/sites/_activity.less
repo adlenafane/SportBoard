@@ -1,0 +1,80 @@
+// Variables
+@brand-primary: #428bca;
+@navbar-default-color: #ddd;
+
+#add-activity {
+  border: 1px solid @navbar-default-color;
+  margin: 0 1em;
+  padding: 1em;
+
+  .row {
+    padding-bottom: 1em;
+    text-align: left;
+
+    label {
+      text-align: right;
+      width: 100%;
+
+      &.small {
+        height: 4em;
+        width: 20%;
+      }
+
+      &.radio-inline {
+        display: inline-block;
+        padding-left: 0;
+        margin-bottom: 0;
+        vertical-align: middle;
+        font-weight: normal;
+        cursor: pointer;
+      }
+    }
+
+    .picto {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 4em;
+      float: left;
+      padding: 0.2em;
+      position: absolute;
+      width: 4em;
+
+      &.thunder {
+        background-image: url(../images/thunder.svg);
+      }
+
+      &.rain {
+        background-image: url(../images/rain.svg);
+      }
+
+      &.partly-cloudy {
+        background-image: url(../images/partly-cloudy.svg);
+      }
+
+      &.sun {
+        background-image: url(../images/sun.svg);
+      }
+    }
+
+    input[type=radio] {
+      visibility: hidden;
+
+      &:checked+div {
+        border: 2px dashed @brand-primary;
+      }
+    }
+  }
+}
+
+@media(max-width:767px){
+  #add-activity {
+    .row {
+      text-align: center;
+
+      label {
+        text-align: center;
+      }
+    }
+  }
+}
