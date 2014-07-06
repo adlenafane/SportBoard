@@ -20,16 +20,6 @@ a {
   margin-left: 0;
   margin-right: 0;
 
-  .row {
-    .col-xs-6:nth-child(1) {
-      padding-right: 0.25em;
-    }
-
-    .col-xs-6:nth-child(2) {
-      padding-left: 0.25em;
-    }
-  }
-
   .tile {
     background: white;
     border: 1px solid @navbar-default-border;
@@ -99,6 +89,20 @@ a {
         &.male {
           content: url("/images/user-male.png");
         }
+      }
+    }
+  }
+}
+
+@media(max-width:767px){
+  .home {
+    .row {
+      .col-xs-6:nth-child(1) {
+        padding-right: 0.25em;
+      }
+
+      .col-xs-6:nth-child(2) {
+        padding-left: 0.25em;
       }
     }
   }
