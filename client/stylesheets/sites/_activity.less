@@ -21,47 +21,31 @@
       }
 
       &.radio-inline {
-        display: inline-block;
         padding-left: 0;
-        margin-bottom: 0;
-        vertical-align: middle;
-        font-weight: normal;
         cursor: pointer;
+        position: relative;
       }
     }
 
     .picto {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 4em;
-      float: left;
-      padding: 0.2em;
-      position: absolute;
-      width: 4em;
-
-      &.thunder {
-        background-image: url(../images/thunder.svg);
-      }
-
-      &.rain {
-        background-image: url(../images/rain.svg);
-      }
-
-      &.partly-cloudy {
-        background-image: url(../images/partly-cloudy.svg);
-      }
-
-      &.sun {
-        background-image: url(../images/sun.svg);
-      }
+      position: relative;
+      margin-top: -50px;
     }
 
     input[type=radio] {
       visibility: hidden;
 
-      &:checked+div {
-        border: 2px dashed @brand-primary;
+      &:checked+svg {
+        path {
+          stroke: @brand-primary;
+          fill: @brand-primary;
+        }
+
+        &.sun {
+          path {
+            fill: none;
+          }
+        }
       }
     }
   }
