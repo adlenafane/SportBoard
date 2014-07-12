@@ -1,30 +1,34 @@
 template(name="activity")
-    h2 Mon activité
-    form(role="form")#add-activity
-        .row
-            .form-group.col-sm-offset-2.col-sm-2
-                label Type
-            .col-sm-5
-                select.form-control
-                    each activityOptions
-                        option #{label}
-        .row.form-group
-            .form-group.col-sm-offset-2.col-sm-2
-                label Durée (min)
-            .col-sm-5
-                input.form-control(type="number", step="1", min="0")
-        .row.form-group
-            .form-group.col-sm-offset-2.col-sm-2
-                label Ressenti
-            .col-sm-6
-                each activityFeeling
-                    +radioPictoOption
-        .row.form-group
-            .form-group.col-sm-offset-2.col-sm-2
-                label Performance
-            .col-sm-6
-                each activityPerformance
-                    +radioPictoOption
-        .row
+    .container
+        .row#add-activity-button
             .col-sm-6.col-sm-offset-3
-                button.btn.btn-primary.btn-block(type="button") Ajouter
+                button.btn.btn-primary.btn-block(type="button") Ajouter une activité
+
+        form(role="form", class="{{ isFormVisible }}")#add-activity
+            .row
+                .form-group.col-sm-offset-2.col-sm-2
+                    label Type
+                .col-sm-5
+                    select.form-control
+                        each activityOptions
+                            option #{label}
+            .row.form-group
+                .form-group.col-sm-offset-2.col-sm-2
+                    label Durée (min)
+                .col-sm-5
+                    input.form-control(type="number", step="1", min="0")
+            .row.form-group
+                .form-group.col-sm-offset-2.col-sm-2
+                    label Ressenti
+                .col-sm-6
+                    each activityFeeling
+                        +radioPictoOption
+            .row.form-group
+                .form-group.col-sm-offset-2.col-sm-2
+                    label Performance
+                .col-sm-6
+                    each activityPerformance
+                        +radioPictoOption
+            .row
+                .col-sm-6.col-sm-offset-3
+                    button.btn.btn-primary.btn-block(type="button") Ajouter
