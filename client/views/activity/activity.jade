@@ -10,13 +10,22 @@ template(name="activity")
                     label Type
                 .col-sm-5
                     select.form-control
-                        each activityOptions
-                            option #{label}
+                        option Cardio
+                        option Renforcement
+                        optgroup(label="Circuits")
+                            each activityCircuitOptions
+                                option #{label}
+                        optgroup(label="Les Mills")
+                            each activityMillsOptions
+                                option #{label}
+                        optgroup(label="Autres")
+                            each activityMiscOptions
+                                option #{label}
             .row.form-group
                 .form-group.col-sm-offset-2.col-sm-2
                     label Durée (min)
                 .col-sm-5
-                    input.form-control(type="number", step="1", min="0")
+                    input.form-control(type="number", step="1", min="0", value="#{defaultTime}")
             .row.form-group
                 .form-group.col-sm-offset-2.col-sm-2
                     label Ressenti
