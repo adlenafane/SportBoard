@@ -32,12 +32,18 @@ template(name="activity")
                 .col-sm-6
                     each activityFeeling
                         +radioPictoOption
+            //.row.form-group
+            //    .form-group.col-sm-offset-2.col-sm-2
+            //        label Performance
+            //    .col-sm-6
+            //        each activityPerformance
+            //            +radioPictoOption
             .row.form-group
                 .form-group.col-sm-offset-2.col-sm-2
                     label Performance
                 .col-sm-6
                     each activityPerformance
-                        +radioPictoOption
+                        +radioPictoSmileOption
             .row
                 .col-sm-6.col-sm-offset-3
                     button.btn.btn-primary.btn-block(type="button") Ajouter

@@ -2,6 +2,10 @@
 @brand-primary: #428bca;
 @navbar-default-color: #ddd;
 
+#add-activity-button {
+  margin-bottom: 1em;
+}
+
 #add-activity {
   border: 1px solid @navbar-default-color;
   padding: 1em;
@@ -39,6 +43,34 @@
       visibility: hidden;
 
       &:checked+svg {
+        &.happy, &.sun {
+          path {
+            stroke: @brand-success;
+            fill: @brand-success;
+          }
+        }
+
+        &.smiley, &.cloud {
+          path {
+            stroke: @brand-info;
+            fill: @brand-info;
+          }
+        }
+
+        &.sad, &.rain {
+          path {
+            stroke: @brand-warning;
+            fill: @brand-warning;
+          }
+        }
+
+        &.confused, &.thunder {
+          path {
+            stroke: @brand-danger;
+            fill: @brand-danger;
+          }
+        }
+
         path {
           stroke: @brand-primary;
           fill: @brand-primary;

@@ -1,0 +1,13 @@
+template(name="radioPictoSmileOption")
+    label.small.radio-inline
+        input.form-control(type="radio", name="#{group}", id="#{group}-happy")
+        +happyIcon
+    label.small.radio-inline
+        input.form-control(type="radio", name="#{group}", id="#{group}-cloud")
+        +smileyIcon
+    label.small.radio-inline
+        input.form-control(type="radio", name="#{group}", id="#{group}-rain")
+        +sadIcon
+    label.small.radio-inline
+        input.form-control(type="radio", name="#{group}", id="#{group}-thunder")
+        +confusedIcon
