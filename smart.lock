@@ -8,7 +8,8 @@
       "less-bootstrap-3": {},
       "font-awesome-4-less": {},
       "jade": {},
-      "moment": {}
+      "moment": {},
+      "bootstrap3-datetimepicker": {}
     },
     "packages": {
       "npm": {
@@ -28,13 +29,13 @@
       },
       "less-bootstrap-3": {
         "git": "https://github.com/DerMambo/less-bootstrap-3.git",
-        "tag": "v0.0.1",
-        "commit": "1321ac0ebc809bc354186b96f4c28b7042e38507"
+        "tag": "v0.0.2",
+        "commit": "b5010b2ff9e9ae6b0e6e13eb0f6c81c9cb84373e"
       },
       "font-awesome-4-less": {
         "git": "https://github.com/svub/fontawesome4-less.git",
-        "tag": "v4.3.9",
-        "commit": "45e5d416d85ad8216ac17066492dddb67ad4acb4"
+        "tag": "v4.4.0",
+        "commit": "250d2336a217c18eb70e9d074784a7db3ca38472"
       },
       "jade": {
         "git": "https://github.com/mquandalle/meteor-jade.git",
@@ -45,6 +46,11 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.6.0",
         "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "bootstrap3-datetimepicker": {
+        "git": "https://github.com/tsega/meteor-bootstrap3-datetimepicker.git",
+        "tag": "v0.1.2",
+        "commit": "9aebe6a10c6dceb17d4cfb3d03ea367748203428"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

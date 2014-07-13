@@ -7,9 +7,17 @@ template(name="activity")
         form(role="form", class="{{ isFormVisible }}")#add-activity
             .row
                 .form-group.col-sm-offset-2.col-sm-2
+                    label Date
+                .col-sm-5
+                    .input-group.datetimepicker(data-date-format="DD MMM YYYY")
+                        span.input-group-addon
+                            i.fa.fa-calendar
+                        input.set-due-date.form-control(type="text", name="date", required)
+            .row
+                .form-group.col-sm-offset-2.col-sm-2
                     label Type
                 .col-sm-5
-                    select.form-control
+                    select.form-control(name="type", required)
                         option Cardio
                         option Renforcement
                         optgroup(label="Circuits")
@@ -25,7 +33,7 @@ template(name="activity")
                 .form-group.col-sm-offset-2.col-sm-2
                     label Durée (min)
                 .col-sm-5
-                    input.form-control(type="number", step="1", min="0", value="#{defaultTime}")
+                    input.form-control(type="number", step="1", min="0", name="duration", value="#{defaultTime}", required)
             .row.form-group
                 .form-group.col-sm-offset-2.col-sm-2
                     label Ressenti
@@ -40,4 +48,11 @@ template(name="activity")
                         +radioPictoSmileOption
             .row
                 .col-sm-6.col-sm-offset-3
-                    button.btn.btn-primary.btn-block(type="button") Ajouter
+                    button.btn.btn-primary.btn-block(type="submit") Ajouter
+        .row#workouts
+            each workouts
+                .col-xs-12
+                    p
+                        strong #{date}
+                        div #{type} - #{duration}min
+                        div Ressenti : #{feeling}/3 Performance : #{performance}/3
